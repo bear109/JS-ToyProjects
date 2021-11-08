@@ -4,7 +4,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordConfirm = document.getElementById('passwordConfirm');
 
-//show function
+//show functions
 function showSuccess(input) {
   const formControl = input.parentElement;
   formControl.className = 'form-control success';
@@ -13,19 +13,15 @@ function showSuccess(input) {
 function showError(input, message) {
   const formControl = input.parentElement;
   formControl.className = 'form-control error';
-  const small = formControl.querySelector('small');
-  small.textContent = message;
+  const err = formControl.querySelector('small');
+  err.textContent = message;
 }
 
-function getFieldName(input) {
-  return input.id.charAt().toUpperCase() + input.id.slice(1);
-}
-
-//check function
+//check functions
 function checkRequired(inputArr) {
-  inputArr.forEach(function (input) {
+  inputArr.forEach((input) => {
     if (input.value.trim() === '') {
-      showError(input, `${getFieldName(input)} is required.`);
+      showError(input, `${input.id}이 입력되지 않았습니다.`);
     } else {
       showSuccess(input);
     }
@@ -34,15 +30,9 @@ function checkRequired(inputArr) {
 
 function checkLength(input, min, max) {
   if (input.value.length < min) {
-    showError(
-      input,
-      `${getFieldName(input)} must be at least ${min} characters`
-    );
+    showError(input, `${input.id}이 ${min}자 이상 이여야 합니다.`);
   } else if (input.value.length > max) {
-    showError(
-      input,
-      `${getFieldName(input)} must be less than ${max} characters`
-    );
+    showError(input, `${input.id}이 ${max}자 이하 이여야 합니다.`);
   } else {
     showSuccess(input);
   }
@@ -54,17 +44,17 @@ function checkEmail(input) {
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
-    showError(input, `Email is not vaild`);
+    showError(input, `${input.id} 형식이 올바르지 않습니다.`);
   }
 }
 
 function checkPasswordsMatch(input1, input2) {
   if (input1.value !== input2.value) {
-    showError(input2, 'Passwords do not match');
+    showError(input2, `비밀번호가 다릅니다.`);
   }
 }
 
-// Event Listeners
+//Event Listeners
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
