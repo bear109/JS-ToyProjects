@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <h2>회원가입</h2>
+        <div class="form-control">
+          <label for="username">유저명</label>
+          <input type="text" id="username" placeholder="유저명" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="email">이메일</label>
+          <input type="text" id="email" placeholder="이메일" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" placeholder="비밀번호" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="confirmPassword">비밀번호 확인</label>
+          <input type="password" id="confirmPassword" placeholder="비밀번호 확인" />
+          <small>Error message</small>
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
