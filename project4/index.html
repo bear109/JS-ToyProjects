@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/77c73a75b9.js"
+      crossorigin="anonymous"
+    ></script>
     <title>환율 계산기</title>
   </head>
   <body>
@@ -66,11 +70,13 @@
           <option value="VND">VND</option>
           <option value="ZAR">ZAR</option>
         </select>
-        <input type="number" id="amount-one" placeholder="0" value="1" />
+        <input type="number" id="amount-one" placeholder="0" value="1000" />
       </div>
 
       <div class="swap-rate-container">
-        <button id="btn" class="btn">Swap</button>
+        <button id="swap" class="btn">
+          <i class="fa-solid fa-rotate fa-2x"></i>
+        </button>
         <div class="rate" id="rate"></div>
       </div>
 
