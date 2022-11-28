@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/77c73a75b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>My Landing Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="user" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+      <h1>개인 페이지</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, eum.
+      </p>
+      <button class="cta-btn" id="open">회원가입</button>
+    </header>
+
+    <div class="container">
+      <h2>개인 페이지에 대한 설명을 입력하세요.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minus,
+        repellat cupiditate vero reprehenderit placeat ex perspiciatis nam,
+        repudiandae voluptatibus vel ut quae id? Minima fuga tempore rerum
+        consequatur dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi
+        natus possimus harum sapiente dolorum dolores reprehenderit enim
+        distinctio doloribus.
+      </p>
+      <h2>문의 사항</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, amet
+        maiores! Numquam quod non molestiae ratione unde porro qui recusandae
+        harum hic officia, odio dolorum repellat obcaecati mollitia, ipsam
+        molestias natus eveniet similique temporibus quae cum aperiam tempore?
+        Vitae, id.
+      </p>
+
+      <h2>혜택</h2>
+      <ul>
+        <li>접근 정책</li>
+        <li>30일 환불 정책</li>
+        <li>커스터마이징 문의</li>
+      </ul>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+        veritatis dignissimos sit ipsa veniam unde voluptate eligendi quae illum
+        nisi, sapiente repellat consectetur laudantium et est rem similique
+        reiciendis architecto hic! Dolores nemo doloremque quia totam deserunt,
+        pariatur alias harum?
+      </p>
+    </div>
+
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>회원가입</h3>
+        </div>
+        <div class="modal-content">
+          <p>더 많은 기능을 사용하려면 회원가입이 필요합니다.</p>
+          <form class="modal-form">
+            <div>
+              <label for="name">유저명</label>
+              <input type="text" id="name" placeholder="유저명" />
+            </div>
+            <div>
+              <label for="email">이메일</label>
+              <input type="email" id="email" placeholder="이메일" />
+            </div>
+            <div>
+              <label for="password">비밀번호</label>
+              <input type="password" id="password" placeholder="비밀번호" />
+            </div>
+            <div>
+              <label for="confirmPassword">비밀번호 확인</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="비밀번호 확인"
+              />
+            </div>
+            <input type="submit" value="회원가입" class="submit-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
